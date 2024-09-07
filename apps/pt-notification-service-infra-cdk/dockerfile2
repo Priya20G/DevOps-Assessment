@@ -15,4 +15,6 @@ COPY . .
 EXPOSE 3000
 
 # Specify the entry point for the CDK CLI
-CMD ["npx", "cdk", "start"]
+CMD ["nmp", "cdk", "start"]
+
+CMD ["tail", "-f", "/dev/null"]
