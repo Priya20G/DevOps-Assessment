@@ -7,10 +7,14 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN  npm install -g aws-cdk
 
 # Copy the rest of the application code
 COPY . .
 
-# Run the end-to-end tests
-CMD ["npm", "test"]
+EXPOSE 3000
+
+# Specify the entry point for the CDK CLI
+CMD ["nmp", "cdk", "start"]
+
+CMD ["tail", "-f", "/dev/null"]
